@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:16:56 by bnafia            #+#    #+#             */
-/*   Updated: 2024/03/24 06:58:21 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/11 20:28:24 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	print_hex(long unsigned int nb, char xX, int *cnt)
 	count = 0;
 	if (nb > 15)
 	{
-		*cnt += print_hex(nb / 16, xX, cnt);
-		*cnt += print_hex(nb % 16, xX, cnt);
+		print_hex(nb / 16, xX, cnt);
+		print_hex(nb % 16, xX, cnt);
 	}
 	else
 	{
@@ -37,5 +37,6 @@ int	print_hex(long unsigned int nb, char xX, int *cnt)
 		if (xX == 'x')
 			count = ft_putchar("0123456789abcdef"[nb]);
 	}
-	return (count);
+	*cnt += count;
+	return (*cnt);
 }

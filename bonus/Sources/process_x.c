@@ -6,7 +6,7 @@
 /*   By: nafia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:30:04 by nafia             #+#    #+#             */
-/*   Updated: 2024/03/24 07:09:01 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/13 04:08:28 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	process_x(t_flags *f, va_list args, char xX, int *cnt)
 	if (f->precision > nb_ele)
 		number_of_loop = f->precision - nb_ele;
 	print_zeros(number_of_loop, f, nb, cnt);
-	which_one_x_bigx(f, xX, cnt);
+	if (nb != 0 )
+		which_one_x_bigx(f, xX, cnt);
 	if (!((f->point == 1) && (nb == 0) && (f->precision == 0)))
 		print_hex(nb, xX, cnt);
 }

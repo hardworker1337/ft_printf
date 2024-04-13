@@ -6,7 +6,7 @@
 /*   By: nafia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:07:16 by nafia             #+#    #+#             */
-/*   Updated: 2024/03/24 00:00:10 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/13 04:48:01 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	process_di(t_flags *f, va_list args, int *cnt)
 	number_of_loop = 0;
 	nb = va_arg(args, int);
 	nb_ele = nb_of_ele_indigit(nb);
-	number_of_loop = handle_cases(f, nb_ele, nb);
+	if(f->space && nb >= 0)
+		number_of_loop = 1;
+	else
+		number_of_loop = handle_cases(f, nb_ele, nb);
 	print_spaces(number_of_loop, f, nb, cnt);
 	number_of_loop = 0;
 	if (f->precision > nb_ele)

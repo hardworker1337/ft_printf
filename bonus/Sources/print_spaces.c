@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 10:19:57 by bnafia            #+#    #+#             */
-/*   Updated: 2024/03/25 15:16:44 by bnafia           ###   ########.fr       */
+/*   Updated: 2024/04/13 03:40:13 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	handle_dash_address(int *iter, t_flags *f, long long nb)
 		*iter = 0;
 	if (f->dash && f->dash < *iter)
 		*iter -= f->dash;
-	if (f->address && f->address < *iter)
+	if (f->address && f->address <= *iter)
 	{
 		if (nb == 0)
 			*iter -= 4;

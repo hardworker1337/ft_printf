@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:47:19 by bnafia            #+#    #+#             */
-/*   Updated: 2024/03/24 07:05:08 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/11 20:25:51 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int	print_digits_u(unsigned int nb, int *cnt)
 	count = 0;
 	if (nb > 9)
 	{
-		*cnt += print_digits_u(nb / 10, cnt);
-		*cnt += print_digits_u(nb % 10, cnt);
+		print_digits_u(nb / 10, cnt);
+		print_digits_u(nb % 10, cnt);
 	}
 	else
 		count = ft_putchar(nb + '0');
-	return (count);
+	*cnt += count;
+	return (*cnt);
 }

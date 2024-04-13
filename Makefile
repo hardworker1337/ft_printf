@@ -6,7 +6,7 @@
 #    By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 18:30:25 by bnafia            #+#    #+#              #
-#    Updated: 2024/03/25 15:06:38 by nafia            ###   ########.fr        #
+#    Updated: 2024/04/10 22:03:30 by bnafia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS			= $(SRCS1) $(SRCS2)
 
 CC				= 	gcc
 RM				= 	rm -f
-CFLAGS			= 	  -Wall -Wextra -Werror 
+CFLAGS			= 	  -g -Wall -Wextra -Werror 
 
 OBJS			= $(SRCS:.c=.o)
 %.o : %.c

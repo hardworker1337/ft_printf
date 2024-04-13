@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 10:17:57 by bnafia            #+#    #+#             */
-/*   Updated: 2024/03/21 14:42:27 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/10 22:20:52 by bnafia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,16 @@ int	print_digits(long long nb)
 	
 	count = 0;
 	if (nb < 0)
+	{
+		count += ft_putchar('-');
 		nb = -nb;
+	}
 	if (nb > 9)
 	{
 		count += print_digits(nb / 10);
 		count += print_digits(nb % 10);
 	}
 	else
-		count = ft_putchar(nb + '0');
+		count += ft_putchar(nb + '0');
 	return (count);	
 }

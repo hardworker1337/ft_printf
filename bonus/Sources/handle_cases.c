@@ -6,13 +6,13 @@
 /*   By: nafia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 11:54:54 by nafia             #+#    #+#             */
-/*   Updated: 2024/03/20 14:37:55 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/13 03:06:08 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	handle_cases(t_flags *f, int nb_element, long long nb)
+int	handle_cases(t_flags *f, long long nb_element, long long nb)
 {
 	int	diff;
 

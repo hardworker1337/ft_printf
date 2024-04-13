@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:03:59 by bnafia            #+#    #+#             */
-/*   Updated: 2024/03/25 15:22:57 by bnafia           ###   ########.fr       */
+/*   Updated: 2024/04/13 03:07:21 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	print_spaces_s(t_flags *f, int nb_element, const char *str, int *cnt);
 void	print_spaces_c(int iter, int *cnt);
 void	which_one_x_bigx(t_flags *f, char c, int *cnt);
 void	ft_putstr(const char *s, int *cnt);
-int		handle_cases(t_flags *f, int nb_element, long long nb);
+int		handle_cases(t_flags *f, long long nb_element, long long nb);
 void	initialize_flags(t_flags *f);
 int		ft_printf(const char *format, ...);
 int		nb_of_ele_indigit(long long nb);
