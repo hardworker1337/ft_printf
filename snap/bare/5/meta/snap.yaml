@@ -1,4 +1,0 @@
-name: bare
-version: 1.0
-type: base
-summary: Empty base snap, useful for testing and fully statically linked snaps
