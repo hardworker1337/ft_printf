@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 10:19:57 by bnafia            #+#    #+#             */
-/*   Updated: 2024/04/13 03:40:13 by nafia            ###   ########.fr       */
+/*   Updated: 2024/04/13 21:03:30 by bnafia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void	print_spaces(int iter, t_flags *f, long long nb, int *cnt)
 		if (f->zero && !f->point)
 			pos = 0;
 	}
+	if (f->space && !f->plus && nb < 0)
+		pos = iter - 1;
 	handle_other_cases(&iter, f, nb, &space_or_zero);
 	handle_dash_address(&iter, f, nb);
 	while (i < iter)

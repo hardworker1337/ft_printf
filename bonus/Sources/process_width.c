@@ -6,7 +6,7 @@
 /*   By: bnafia <bnafia@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 10:29:47 by bnafia            #+#    #+#             */
-/*   Updated: 2024/03/25 15:18:23 by bnafia           ###   ########.fr       */
+/*   Updated: 2024/04/13 20:39:07 by nafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ char	*process_width(t_flags *f, const char *s)
 	if (res > tmp)
 		return (NULL);
 	f->width = res;
+//	if (f->space)
+//		f->width++;
 	return (&((char *)s)[i]);
 }
